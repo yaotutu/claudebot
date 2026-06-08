@@ -1,0 +1,131 @@
+[project]
+name = "claudebot"
+version = "0.2.1"
+description = "A lightweight personal AI assistant framework"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [
+    {name = "the claudebot contributors"}
+]
+keywords = ["ai", "agent", "chatbot"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+license-files = [
+    "LICENSE",
+]
+
+dependencies = [
+    "typer>=0.20.0,<1.0.0",
+    "pydantic>=2.12.0,<3.0.0",
+    "pydantic-settings>=2.12.0,<3.0.0",
+    "websockets>=16.0,<17.0",
+    "websocket-client>=1.9.0,<2.0.0",
+    "httpx>=0.28.0,<1.0.0",
+    "loguru>=0.7.3,<1.0.0",
+    "rich>=14.0.0,<15.0.0",
+    "prompt-toolkit>=3.0.50,<4.0.0",
+    "questionary>=2.0.0,<3.0.0",
+    "tiktoken>=0.12.0,<1.0.0",
+    "jinja2>=3.1.0,<4.0.0",
+    "dulwich>=0.22.0,<1.0.0",
+    "pyyaml>=6.0,<7.0.0",
+    "pypdf>=5.0.0,<6.0.0",
+    "python-docx>=1.1.0,<2.0.0",
+    "openpyxl>=3.1.0,<4.0.0",
+    "python-pptx>=1.0.0,<2.0.0",
+    "filelock>=3.25.2",
+    "claude-agent-sdk>=0.2.93",
+]
+
+[project.optional-dependencies]
+langsmith = [
+    "langsmith>=0.1.0",
+]
+pdf = [
+    "pymupdf>=1.25.0",
+]
+olostep = [
+    "olostep>=0.1.0",
+]
+dev = [
+    "pytest>=9.0.0,<10.0.0",
+    "pytest-asyncio>=1.3.0,<2.0.0",
+    "aiohttp>=3.9.0,<4.0.0",
+    "pytest-cov>=6.0.0,<7.0.0",
+    "ruff>=0.1.0",
+    "pymupdf>=1.25.0",
+]
+
+[project.scripts]
+claudebot = "claudebot.cli.commands:app"
+
+# Third-party tool plugins register here.  Built-in tools are discovered
+# automatically via pkgutil scanning in ToolLoader.discover().
+# [project.entry-points."claudebot.tools"]
+# my_plugin = "my_package.plugins:MyTool"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build]
+include = [
+    "claudebot/**/*.py",
+    "claudebot/templates/**/*.md",
+    "claudebot/skills/**/*.md",
+    "claudebot/skills/**/*.sh",
+    "claudebot/web/dist/**/*",
+]
+# claudebot/web/dist/ is produced by `cd webui && bun run build` and is
+# git-ignored. List it as an artifact so hatch ships it in both wheel and
+# sdist even though VCS does not track it.
+artifacts = [
+    "claudebot/web/dist/**/*",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["claudebot"]
+
+[tool.hatch.build.targets.wheel.sources]
+"claudebot" = "claudebot"
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "claudebot/",
+    "claudebot/web/dist/",
+    "LICENSE",
+    "pyproject.toml",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W"]
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[tool.coverage.run]
+source = ["claudebot"]
+omit = ["tests/*", "**/tests/*"]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "raise NotImplementedError",
+    "if __name__ == .__main__.:",
+    "if TYPE_CHECKING:",
+]

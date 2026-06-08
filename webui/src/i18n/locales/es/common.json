@@ -1,0 +1,572 @@
+{
+  "app": {
+    "brand": "claudebot",
+    "loading": {
+      "connecting": "Conectando con claudebot…",
+      "boot": "Cargando claudebot…"
+    },
+    "error": {
+      "title": "No se pudo conectar con claudebot",
+      "gatewayHint": "Asegúrate de que la gateway esté en ejecución (`claudebot gateway`) y de que esta página esté abierta en la misma máquina."
+    },
+    "auth": {
+      "title": "Autenticación requerida",
+      "hint": "Introduce el secreto configurado como tokenIssueSecret en la configuración del gateway.",
+      "placeholder": "Contraseña",
+      "submit": "Conectar",
+      "invalid": "Contraseña no válida. Inténtalo de nuevo."
+    },
+    "account": {
+      "section": "Cuenta",
+      "logoutHint": "Desconecta este navegador del gateway.",
+      "logout": "Cerrar sesión"
+    },
+    "system": {
+      "section": "Sistema",
+      "restartHint": "Reinicia claudebot para aplicar los cambios de ejecución.",
+      "restart": "Reiniciar claudebot",
+      "restarting": "Reiniciando...",
+      "restartEngine": "Reiniciar motor",
+      "restartingEngine": "Reiniciando motor..."
+    },
+    "restart": {
+      "completed": "Reinicio completado en {{seconds}} s."
+    },
+    "documentTitle": {
+      "base": "claudebot",
+      "chat": "{{title}} · claudebot"
+    },
+    "meta": {
+      "description": "Interfaz web de claudebot: conversa con tu espacio de trabajo de claudebot."
+    }
+  },
+  "sidebar": {
+    "navigation": "Navegación de la barra lateral",
+    "collapse": "Contraer barra lateral",
+    "newChat": "Nuevo chat",
+    "searchAria": "Buscar",
+    "searchPlaceholder": "Buscar",
+    "searchResults": "Resultados",
+    "noSearchResults": "No hay chats coincidentes.",
+    "recent": "Recientes",
+    "settings": "Configuración",
+    "language": {
+      "label": "Idioma",
+      "ariaLabel": "Cambiar idioma"
+    },
+    "apps": "Apps",
+    "skills": {
+      "title": "Habilidades"
+    }
+  },
+  "settings": {
+    "backToChat": "Volver al chat",
+    "sidebar": {
+      "title": "Ajustes",
+      "ariaLabel": "Secciones de ajustes"
+    },
+    "nav": {
+      "overview": "Resumen",
+      "appearance": "Apariencia",
+      "runtime": "Sistema",
+      "advanced": "Seguridad",
+      "skills": "Habilidades"
+    },
+    "sections": {
+      "interface": "Interfaz",
+      "system": "Sistema",
+      "status": "Estado",
+      "localPreferences": "Preferencias locales",
+      "identity": "Identidad",
+      "webuiSafety": "Seguridad de WebUI",
+      "capabilities": "Capacidades",
+      "hostSafety": "Seguridad de la app"
+    },
+    "rows": {
+      "theme": "Tema",
+      "language": "Idioma",
+      "model": "Modelo",
+      "restart": "Reiniciar claudebot",
+      "configPath": "Ruta de configuración",
+      "gateway": "Pasarela",
+      "restartState": "Estado de reinicio",
+      "pendingChanges": "Cambios pendientes",
+      "density": "Densidad",
+      "activityMode": "Detalle de actividad",
+      "codeWrap": "Ajuste de código",
+      "botName": "Nombre del bot",
+      "botIcon": "Icono del bot",
+      "timezone": "Zona horaria",
+      "workspacePath": "Workspace predeterminado",
+      "localServiceAccess": "Servicios locales",
+      "webuiDefaultAccess": "Acceso predeterminado",
+      "currentModel": "Configuración actual",
+      "brandLogos": "Logos de marca",
+      "engine": "Motor",
+      "logs": "Registros",
+      "diagnostics": "Diagnóstico",
+      "contextWindow": "Ventana de contexto"
+    },
+    "help": {
+      "theme": "Cambia entre apariencia clara y oscura.",
+      "language": "Elige el idioma usado por WebUI.",
+      "model": "Define el nombre de modelo predeterminado de claudebot.",
+      "configPath": "Archivo de configuración que usa actualmente el gateway.",
+      "density": "Solo se guarda en este navegador.",
+      "activityMode": "Elige cuánto detalle de actividad del agente se muestra por defecto.",
+      "codeWrap": "Mantiene legibles las líneas largas de código en pantallas pequeñas.",
+      "botName": "Se muestra donde claudebot usa un nombre visible.",
+      "botIcon": "Emoji o texto corto junto al nombre del bot.",
+      "timezone": "Se usa para horarios y respuestas con conciencia temporal.",
+      "localServiceAccess": "Permite que comandos shell con Full Access alcancen servicios localhost.",
+      "webuiDefaultAccess": "Usado por chats web sin permiso específico de proyecto.",
+      "securityManagedControls": "Las capturas web siempre protegen servicios locales, privados y metadata. La seguridad de canales core se gestiona en config.json.",
+      "currentModel": "Se usa para nuevas respuestas.",
+      "selectedModelValue": "Definido por el modelo seleccionado.",
+      "brandLogos": "Show Claude Code and CLI logos in Settings.",
+      "diagnostics": "Exporta un pequeño informe de runtime para soporte.",
+      "contextWindow": "Elige el presupuesto de contexto predeterminado para esta configuración de modelo."
+    },
+    "values": {
+      "light": "Claro",
+      "dark": "Oscuro",
+      "notAvailable": "No disponible",
+      "enabled": "Activado",
+      "disabled": "Desactivado",
+      "restartPending": "Reinicio pendiente",
+      "ready": "Listo",
+      "privateEngine": "Motor privado",
+      "unixSocket": "Socket Unix",
+      "defaultWorkspace": "Espacio predeterminado",
+      "comfortable": "Cómodo",
+      "compact": "Compacto",
+      "auto": "Automático",
+      "expanded": "Expandido",
+      "on": "Activado",
+      "off": "Desactivado",
+      "defaultPermission": "Permiso predeterminado",
+      "fullAccess": "Acceso completo",
+      "configured": "Configurado",
+      "notConfigured": "Sin configurar",
+      "pending": "Pendiente",
+      "restartingEngine": "Reiniciando"
+    },
+    "status": {
+      "loading": "Cargando ajustes...",
+      "loadError": "No se pudieron cargar los ajustes",
+      "unsaved": "Cambios sin guardar.",
+      "upToDate": "Actualizado.",
+      "savedRestart": "Guardado. Reinicia claudebot para aplicar.",
+      "restartAfterSaving": "Guarda los cambios y reinicia cuando puedas.",
+      "savedRestartApply": "Guardado. Reinicia cuando puedas.",
+      "hostRestartAfterSaving": "Al guardar, claudebot reiniciará su motor.",
+      "hostRestartPending": "Guardado. El motor se reiniciará cuando esté listo.",
+      "logsOpened": "Carpeta de registros abierta.",
+      "logsOpenFailed": "No se pudo abrir la carpeta de registros.",
+      "diagnosticsExported": "Diagnóstico exportado a {{path}}.",
+      "diagnosticsExportFailed": "No se pudo exportar el diagnóstico."
+    },
+    "actions": {
+      "save": "Guardar",
+      "saving": "Guardando",
+      "edit": "Editar",
+      "cancel": "Cancelar",
+      "open": "Abrir",
+      "export": "Exportar",
+      "opening": "Abriendo...",
+      "exporting": "Exportando..."
+    },
+    "usage": {
+      "title": "Actividad de tokens",
+      "shortTitle": "Token Usage",
+      "subtitle": "Uso reportado por el runtime durante los últimos 12 meses.",
+      "empty": "La actividad de tokens aparecerá después de nuevas respuestas del modelo.",
+      "totalTokens": "Tokens totales",
+      "peakTokens": "Pico de tokens",
+      "thirtyDayTokens": "Tokens en 30 días",
+      "currentStreak": "Racha actual",
+      "longestStreak": "Racha más larga",
+      "daysValue": "{{count}} d",
+      "last30": "30 días",
+      "activeDays": "Días activos",
+      "requests": "Solicitudes",
+      "estimated": "estimado",
+      "includesEstimates": "incluye estimaciones",
+      "cellTitle": "{{date}}: {{tokens}} tokens, {{requests}} solicitudes",
+      "sources": {
+        "user": "Chat",
+        "api": "API",
+        "cron": "Automatizaciones",
+        "dream": "Memoria",
+        "system": "Sistema"
+      }
+    },
+    "timezone": {
+      "select": "Seleccionar zona horaria",
+      "search": "Buscar zona horaria",
+      "empty": "No hay zonas horarias coincidentes."
+    },
+    "skills": {
+      "description": "Revisa las habilidades de instrucciones que este agente puede cargar durante una conversación.",
+      "caption": "{{available}} disponibles · {{total}} en total",
+      "featured": "Habilidades del agente",
+      "empty": "No hay habilidades disponibles.",
+      "sourceWorkspace": "Personalizada",
+      "sourceBuiltin": "Integradas",
+      "statusAvailable": "Disponible",
+      "statusUnavailable": "No disponible",
+      "unavailableReason": "Falta: {{reason}}",
+      "openDetails": "Abrir detalles de {{name}}",
+      "loadingDetail": "Cargando detalles de la habilidad...",
+      "loadFailed": "No se pudieron cargar los detalles.",
+      "descriptionTitle": "Descripción",
+      "source": "Origen",
+      "status": "Estado",
+      "requirements": "Requisitos",
+      "noRequirements": "Sin requisitos explícitos.",
+      "commands": "Comandos",
+      "environment": "Variables de entorno",
+      "missingCommands": "Falta CLI",
+      "missingEnvironment": "Falta ENV",
+      "unavailableReasonLabel": "Motivo de indisponibilidad",
+      "rawInstructions": "SKILL.md original",
+      "rawInstructionsEmpty": "No hay instrucciones originales.",
+      "detailDescription": "Detalles de {{name}}."
+    }
+  },
+  "chat": {
+    "fallbackTitle": "Chat {{id}}",
+    "loading": "Cargando…",
+    "noSessions": "Todavía no hay sesiones.",
+    "showMore": "Mostrar {{count}} más",
+    "collapsed": "{{count}} chats ocultos",
+    "showLess": "Mostrar menos",
+    "actions": "Acciones del chat {{title}}",
+    "newInProject": "Iniciar un chat nuevo en {{project}}",
+    "activity": {
+      "running": "Agent running",
+      "complete": "Agent finished"
+    },
+    "pin": "Pin",
+    "unpin": "Unpin",
+    "rename": "Rename",
+    "renameTitle": "Rename chat",
+    "renameDescription": "Choose a local sidebar name for this chat.",
+    "renamePlaceholder": "Chat name",
+    "renameProjectTitle": "Rename project",
+    "renameProjectDescription": "Choose a local sidebar name for this project.",
+    "renameProjectPlaceholder": "Project name",
+    "renameSave": "Save",
+    "archive": "Archive",
+    "unarchive": "Unarchive",
+    "showArchived": "Show archived",
+    "hideArchived": "Hide archived",
+    "delete": "Eliminar",
+    "newChat": "Nuevo chat",
+    "groups": {
+      "pinned": "Pinned",
+      "all": "Chats",
+      "projects": "Projects",
+      "today": "Today",
+      "yesterday": "Yesterday",
+      "earlier": "Earlier",
+      "archived": "Archived"
+    }
+  },
+  "deleteConfirm": {
+    "title": "¿Eliminar este chat?",
+    "description": "Esta acción no se puede deshacer.",
+    "cancel": "Cancelar",
+    "confirm": "Eliminar"
+  },
+  "connection": {
+    "idle": "Inactivo",
+    "connecting": "Conectando…",
+    "open": "Conectado",
+    "reconnecting": "Reconectando…",
+    "closed": "Desconectado",
+    "error": "Error de conexión"
+  },
+  "thread": {
+    "loadingConversation": "Cargando conversación…",
+    "empty": {
+      "greetings": {
+        "workOn": "¿En qué trabajamos juntos?",
+        "start": "¿Por dónde empezamos?",
+        "build": "¿Qué construimos hoy?",
+        "tackle": "¿Qué resolvemos juntos?"
+      },
+      "quickActions": {
+        "plan": {
+          "title": "Crear un plan de proyecto",
+          "prompt": "Crea un plan de proyecto conciso para lo que debería construir después."
+        },
+        "analyze": {
+          "title": "Analizar estos datos",
+          "prompt": "Ayúdame a analizar estos datos y destaca los patrones más importantes."
+        },
+        "brainstorm": {
+          "title": "Lluvia de ideas",
+          "prompt": "Propón algunas ideas prácticas y sus compensaciones para este problema."
+        },
+        "code": {
+          "title": "Escribir código",
+          "prompt": "Ayúdame a escribir el código para esta tarea, empezando por el cambio útil más pequeño."
+        },
+        "summarize": {
+          "title": "Resumir este documento",
+          "prompt": "Resume este documento y enumera las conclusiones clave."
+        },
+        "more": {
+          "title": "Más",
+          "prompt": "Muéstrame algunas formas útiles en las que puedes ayudar en este workspace."
+        }
+      },
+      "imageQuickActions": {
+        "icon": {
+          "title": "Diseñar un icono de app",
+          "prompt": "Genera un icono de app 1:1 limpio para claudebot: robot amigable, estilo vectorial simple, paleta suave azul y blanca, sin texto."
+        },
+        "sticker": {
+          "title": "Crear un sticker",
+          "prompt": "Genera una imagen estilo sticker de un pequeño asistente robot, con fondo de apariencia transparente, expresivo y divertido."
+        },
+        "poster": {
+          "title": "Crear un póster",
+          "prompt": "Genera un concepto de póster pulido para un asistente personal de IA, composición moderna, jerarquía visual fuerte, apto para una landing page."
+        },
+        "product": {
+          "title": "Mockup de producto",
+          "prompt": "Genera una imagen limpia de mockup de producto para una app web de IA conversacional, interfaz mínima, iluminación premium, marco de dispositivo realista."
+        },
+        "portrait": {
+          "title": "Retrato estilizado",
+          "prompt": "Genera un retrato estilizado de un compañero de IA amigable, luz suave, detallado pero cercano, estilo de ilustración moderna."
+        },
+        "edit": {
+          "title": "Editar una imagen",
+          "prompt": "Ayúdame a editar una imagen. Primero pídeme que suba o indique la imagen, y luego genera el resultado editado."
+        }
+      }
+    },
+    "header": {
+      "toggleSidebar": "Mostrar u ocultar la barra lateral",
+      "newChat": "Iniciar un chat nuevo",
+      "toggleTheme": "Cambiar tema desde el encabezado",
+      "settings": "Abrir configuración",
+      "sessionInfo": "Detalles de la sesión"
+    },
+    "sessionInfo": {
+      "title": "Sesión",
+      "untitled": "Chat sin título",
+      "automations": "Automatizaciones",
+      "count": "{{count}}",
+      "loading": "Cargando automatizaciones...",
+      "loadFailed": "No se pudieron cargar las automatizaciones.",
+      "empty": "Esta sesión aún no tiene automatizaciones.",
+      "disabled": "Desactivado",
+      "schedule": {
+        "at": "A las {{time}}",
+        "every": "Cada {{duration}}",
+        "cron": "Cron {{expr}}",
+        "cronWithTz": "Cron {{expr}} · {{tz}}",
+        "unknown": "Programación personalizada"
+      },
+      "next": {
+        "label": "Siguiente {{time}}",
+        "disabled": "En pausa",
+        "none": "Sin próxima ejecución"
+      }
+    },
+    "composer": {
+      "placeholderThread": "Escribe tu mensaje…",
+      "placeholderHero": "¿Qué tienes en mente?",
+      "placeholderOpening": "Abriendo un nuevo chat…",
+      "placeholderStreaming": "El modelo está respondiendo…",
+      "inputAria": "Entrada de mensaje",
+      "sendHint": "Enter para enviar · Shift+Enter para nueva línea",
+      "runRuntimeTitle": "En ejecución · {{elapsed}}",
+      "goalStateStrip": "Objetivo · {{label}}",
+      "goalStateFallback": "Objetivo",
+      "goalStateExpandAria": "Ver objetivo completo",
+      "goalStateSheetTitle": "Objetivo",
+      "goalStateCloseAria": "Cerrar objetivo",
+      "send": "Enviar mensaje",
+      "stop": "Detener respuesta",
+      "modelNotConfigured": "Modelo no configurado",
+      "configureModel": "Configurar modelo",
+      "queued": {
+        "label": "Guía en cola",
+        "guide": "Guiar",
+        "delete": "Eliminar guía",
+        "edit": "Editar guía",
+        "drag": "Arrastrar para reordenar"
+      },
+      "attachImage": "Adjuntar imagen",
+      "imageMode": {
+        "label": "Generar imagen",
+        "toggle": "Activar o desactivar modo de generación de imágenes",
+        "placeholder": "Describe o edita una imagen…",
+        "aspectAria": "Relación de aspecto de imagen",
+        "aspectLabel": "Formato de imagen",
+        "aspect": {
+          "auto": "Auto",
+          "1_1": "Cuadrado 1:1",
+          "3_4": "Vertical 3:4",
+          "9_16": "Historia 9:16",
+          "4_3": "Horizontal 4:3",
+          "16_9": "Panorámico 16:9"
+        }
+      },
+      "tools": {
+        "search": "Buscar",
+        "reason": "Razonar",
+        "deepResearch": "Investigación profunda",
+        "voice": "Entrada de voz"
+      },
+      "slash": {
+        "ariaLabel": "Comandos slash",
+        "label": "comandos",
+        "navigateHint": "↑↓ Navegar",
+        "selectHint": "Enter/Tab Insertar",
+        "closeHint": "Esc Cerrar",
+        "commands": {
+          "stop": {
+            "title": "Detener tarea actual",
+            "description": "Cancela el turno activo del agent en este chat."
+          },
+          "restart": {
+            "title": "Reiniciar claudebot",
+            "description": "Reinicia el proceso del bot en el mismo lugar."
+          },
+          "help": {
+            "title": "Mostrar ayuda",
+            "description": "Lista los comandos slash disponibles."
+          }
+        },
+        "badges": {
+          "recent": "Reciente"
+        },
+        "details": {
+          "stopRunning": "En ejecución"
+        }
+      },
+      "encoding": "Procesando…",
+      "remove": "Quitar adjunto",
+      "normalizedSizeHint": "{{orig}} → {{current}} (auto)",
+      "imageRejected": {
+        "unsupported_type": "Tipo de archivo no compatible",
+        "too_many_images": "Máximo {{max}} imágenes por mensaje",
+        "magic_mismatch": "El archivo no parece una imagen real",
+        "decode_failed": "No se pudo decodificar esta imagen",
+        "too_large": "Imagen demasiado grande — prueba una más pequeña",
+        "io": "No se pudo leer este archivo"
+      },
+      "mentions": {
+        "ariaLabel": "Apps",
+        "label": "Apps",
+        "cliGroup": "Apps CLI",
+        "mcpGroup": "Servicios MCP",
+        "cliBadge": "CLI",
+        "mcpBadge": "MCP",
+        "cliDescription": "Usar @{{name}} como app CLI local",
+        "mcpDescription": "Usar @{{name}} como servidor MCP"
+      },
+      "workspace": {
+        "accessAria": "Workspace access mode",
+        "projectAria": "Elegir proyecto",
+        "projectPlaceholder": "Seleccionar proyecto",
+        "default": "Default Permission",
+        "full": "Full Access"
+      }
+    },
+    "scrollToBottom": "Desplazarse al final",
+    "loadEarlier": "Cargar mensajes anteriores",
+    "promptNavigator": {
+      "open": "Abrir navegador de prompts",
+      "title": "Prompts",
+      "search": "Buscar prompts",
+      "noResults": "No hay prompts coincidentes.",
+      "jumpTo": "Ir al prompt: {{label}}"
+    }
+  },
+  "message": {
+    "streaming": "transmitiendo",
+    "assistantTyping": "El asistente está escribiendo",
+    "toolSingle": "Usando una herramienta",
+    "toolMany": "Se usaron {{count}} herramientas",
+    "toolSummary": "{{count}} herramienta",
+    "toolSummaryMany": "{{count}} herramientas",
+    "reasoningTools": "Razonamiento · {{count}} herramientas",
+    "reasoningToolsSingular": "Razonamiento · 1 herramienta",
+    "reasoning": "Razonamiento",
+    "reasoningStreaming": "Pensando…",
+    "reasoningSummary": "Razonamiento",
+    "agentActivitySummary": "{{reasoning}} pasos · {{tools}} llamadas a herramientas",
+    "agentActivityToolsOnly": "{{tools}} llamadas a herramientas",
+    "agentActivityLiveSummary": "En curso… · {{reasoning}} pasos · {{tools}} llamadas a herramientas",
+    "agentActivityLiveToolsOnly": "En curso… · {{tools}} llamadas a herramientas",
+    "imageAttachment": "Imagen adjunta",
+    "copyReply": "Copiar respuesta",
+    "copiedReply": "Respuesta copiada",
+    "turnLatencyTitle": "Tiempo de respuesta (extremo a extremo)",
+    "activityThinkingFor": "Pensando durante {{duration}}",
+    "activityThought": "Pensamiento completado",
+    "activityThoughtFor": "Pensó durante {{duration}}",
+    "cliActivityRunningOne": "Usando @{{name}}",
+    "cliActivityRanOne": "Usó @{{name}}",
+    "cliActivityFailedOne": "Falló @{{name}}",
+    "cliActivityRunningMany": "Usando {{count}} apps CLI",
+    "cliActivityRanMany": "Usó {{count}} apps CLI",
+    "cliActivityFailedMany": "Fallaron {{count}} apps CLI",
+    "cliRunRunning": "Usando",
+    "cliRunRan": "Usado",
+    "cliRunFailed": "Falló",
+    "automationSourceFallback": "Automatización",
+    "automationTriggered": "Activada automáticamente"
+  },
+  "lightbox": {
+    "title": "Vista previa de imagen",
+    "open": "Ver imagen",
+    "prev": "Imagen anterior",
+    "next": "Imagen siguiente",
+    "close": "Cerrar vista previa"
+  },
+  "filePreview": {
+    "aria": "Vista previa de archivo",
+    "close": "Cerrar vista previa de archivo",
+    "loading": "Cargando vista previa...",
+    "failed": "No se pudo previsualizar este archivo.",
+    "routeMissing": "La vista previa necesita el gateway más reciente. Reinicia claudebot gateway e inténtalo de nuevo.",
+    "resize": "Cambiar el tamaño de la vista previa",
+    "truncated": "La vista previa está truncada porque el archivo es grande."
+  },
+  "code": {
+    "fallbackLanguage": "código",
+    "copyAria": "Copiar código",
+    "copy": "Copiar",
+    "copied": "Copiado"
+  },
+  "common": {
+    "dismiss": "Cerrar"
+  },
+  "errors": {
+    "messageTooBig": {
+      "title": "Mensaje demasiado grande",
+      "body": "El servidor rechazó tu último mensaje por superar el tamaño permitido. Quita algunas imágenes o usa archivos más pequeños y vuelve a enviarlo."
+    },
+    "workspaceScopeRejected": {
+      "title": "Workspace was not changed",
+      "body": "Claudebot kept the previous workspace because the requested project or access mode was rejected by the gateway."
+    }
+  },
+  "workspace": {
+    "dialog": {
+      "defaultProject": "Default workspace",
+      "manual": "Pegar ruta",
+      "manualPlaceholder": "/Users/name/project",
+      "usePath": "Use Path",
+      "absolutePathRequired": "Enter an absolute folder path on this machine."
+    }
+  }
+}

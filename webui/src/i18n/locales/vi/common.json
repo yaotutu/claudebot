@@ -1,0 +1,572 @@
+{
+  "app": {
+    "brand": "claudebot",
+    "loading": {
+      "connecting": "Đang kết nối tới claudebot…",
+      "boot": "Đang tải claudebot…"
+    },
+    "error": {
+      "title": "Không thể kết nối tới claudebot",
+      "gatewayHint": "Hãy chắc chắn gateway đang chạy (`claudebot gateway`) và trang này được mở trên cùng máy."
+    },
+    "auth": {
+      "title": "Cần xác thực",
+      "hint": "Nhập secret được cấu hình là tokenIssueSecret trong cấu hình gateway.",
+      "placeholder": "Mật khẩu",
+      "submit": "Kết nối",
+      "invalid": "Mật khẩu không hợp lệ. Hãy thử lại."
+    },
+    "account": {
+      "section": "Tài khoản",
+      "logoutHint": "Ngắt kết nối trình duyệt này khỏi gateway.",
+      "logout": "Đăng xuất"
+    },
+    "system": {
+      "section": "Hệ thống",
+      "restartHint": "Khởi động lại claudebot để áp dụng thay đổi runtime.",
+      "restart": "Khởi động lại claudebot",
+      "restarting": "Đang khởi động lại...",
+      "restartEngine": "Khởi động lại engine",
+      "restartingEngine": "Đang khởi động lại engine..."
+    },
+    "restart": {
+      "completed": "Khởi động lại hoàn tất sau {{seconds}} giây."
+    },
+    "documentTitle": {
+      "base": "claudebot",
+      "chat": "{{title}} · claudebot"
+    },
+    "meta": {
+      "description": "Giao diện web claudebot — trò chuyện với workspace claudebot của bạn."
+    }
+  },
+  "sidebar": {
+    "navigation": "Điều hướng thanh bên",
+    "collapse": "Thu gọn thanh bên",
+    "newChat": "Cuộc trò chuyện mới",
+    "searchAria": "Tìm kiếm",
+    "searchPlaceholder": "Tìm kiếm",
+    "searchResults": "Kết quả",
+    "noSearchResults": "Không có cuộc trò chuyện phù hợp.",
+    "recent": "Gần đây",
+    "settings": "Cài đặt",
+    "language": {
+      "label": "Ngôn ngữ",
+      "ariaLabel": "Đổi ngôn ngữ"
+    },
+    "apps": "Ứng dụng",
+    "skills": {
+      "title": "Kỹ năng"
+    }
+  },
+  "settings": {
+    "backToChat": "Quay lại chat",
+    "sidebar": {
+      "title": "Cài đặt",
+      "ariaLabel": "Mục cài đặt"
+    },
+    "nav": {
+      "overview": "Tổng quan",
+      "appearance": "Giao diện",
+      "runtime": "Hệ thống",
+      "advanced": "Bảo mật",
+      "skills": "Kỹ năng"
+    },
+    "sections": {
+      "interface": "Giao diện",
+      "system": "Hệ thống",
+      "status": "Trạng thái",
+      "localPreferences": "Tùy chọn cục bộ",
+      "identity": "Danh tính",
+      "webuiSafety": "An toàn WebUI",
+      "capabilities": "Khả năng",
+      "hostSafety": "An toàn ứng dụng"
+    },
+    "rows": {
+      "theme": "Chủ đề",
+      "language": "Ngôn ngữ",
+      "model": "Mô hình",
+      "restart": "Khởi động lại claudebot",
+      "configPath": "Đường dẫn cấu hình",
+      "gateway": "Cổng",
+      "restartState": "Trạng thái khởi động lại",
+      "pendingChanges": "Thay đổi chờ áp dụng",
+      "density": "Mật độ",
+      "activityMode": "Chi tiết hoạt động",
+      "codeWrap": "Xuống dòng mã",
+      "botName": "Tên bot",
+      "botIcon": "Biểu tượng bot",
+      "timezone": "Múi giờ",
+      "workspacePath": "Workspace mặc định",
+      "localServiceAccess": "Dịch vụ cục bộ",
+      "webuiDefaultAccess": "Quyền mặc định",
+      "currentModel": "Cấu hình hiện tại",
+      "brandLogos": "Logo thương hiệu",
+      "engine": "Bộ máy",
+      "logs": "Nhật ký",
+      "diagnostics": "Chẩn đoán",
+      "contextWindow": "Cửa sổ ngữ cảnh"
+    },
+    "help": {
+      "theme": "Chuyển giữa giao diện sáng và tối.",
+      "language": "Chọn ngôn ngữ dùng trong WebUI.",
+      "model": "Define el nombre de modelo predeterminado de claudebot.",
+      "configPath": "Archivo de configuración que usa actualmente el gateway.",
+      "density": "Chỉ lưu trong trình duyệt này.",
+      "activityMode": "Chọn mức chi tiết hoạt động agent hiển thị mặc định.",
+      "codeWrap": "Giữ các dòng mã dài dễ đọc trên màn hình nhỏ.",
+      "botName": "Se muestra donde claudebot usa un nombre visible.",
+      "botIcon": "Emoji o texto corto junto al nombre del bot.",
+      "timezone": "Se usa para horarios y respuestas con conciencia temporal.",
+      "localServiceAccess": "Cho phép lệnh shell Full Access truy cập dịch vụ localhost.",
+      "webuiDefaultAccess": "Dùng cho chat web không có quyền riêng theo dự án.",
+      "securityManagedControls": "Las capturas web siempre protegen servicios locales, privados y metadata. La seguridad de canales core se gestiona en config.json.",
+      "currentModel": "Dùng cho các phản hồi mới.",
+      "selectedModelValue": "Definido por el modelo seleccionado.",
+      "brandLogos": "Show Claude Code and CLI logos in Settings.",
+      "diagnostics": "Exporta un pequeño informe de runtime para soporte.",
+      "contextWindow": "Chọn ngân sách ngữ cảnh mặc định cho cấu hình mô hình này."
+    },
+    "values": {
+      "light": "Sáng",
+      "dark": "Tối",
+      "notAvailable": "Không khả dụng",
+      "enabled": "Đã bật",
+      "disabled": "Đã tắt",
+      "restartPending": "Chờ khởi động lại",
+      "ready": "Sẵn sàng",
+      "privateEngine": "Bộ máy riêng",
+      "unixSocket": "Socket Unix",
+      "defaultWorkspace": "Workspace mặc định",
+      "comfortable": "Thoải mái",
+      "compact": "Gọn",
+      "auto": "Tự động",
+      "expanded": "Mở rộng",
+      "on": "Bật",
+      "off": "Tắt",
+      "defaultPermission": "Quyền mặc định",
+      "fullAccess": "Toàn quyền",
+      "configured": "Đã cấu hình",
+      "notConfigured": "Chưa cấu hình",
+      "pending": "Đang chờ",
+      "restartingEngine": "Đang khởi động lại"
+    },
+    "status": {
+      "loading": "Đang tải cài đặt...",
+      "loadError": "Không thể tải cài đặt",
+      "unsaved": "Có thay đổi chưa lưu.",
+      "upToDate": "Đã cập nhật.",
+      "savedRestart": "Guardado. Reinicia claudebot para aplicar.",
+      "restartAfterSaving": "Guarda los cambios y reinicia cuando puedas.",
+      "savedRestartApply": "Guardado. Reinicia cuando puedas.",
+      "hostRestartAfterSaving": "Al guardar, claudebot reiniciará su motor.",
+      "hostRestartPending": "Guardado. El motor se reiniciará cuando esté listo.",
+      "logsOpened": "Carpeta de registros abierta.",
+      "logsOpenFailed": "No se pudo abrir la carpeta de registros.",
+      "diagnosticsExported": "Diagnóstico exportado a {{path}}.",
+      "diagnosticsExportFailed": "No se pudo exportar el diagnóstico."
+    },
+    "actions": {
+      "save": "Lưu",
+      "saving": "Đang lưu",
+      "edit": "Sửa",
+      "cancel": "Hủy",
+      "open": "Mở",
+      "export": "Xuất",
+      "opening": "Đang mở...",
+      "exporting": "Đang xuất..."
+    },
+    "usage": {
+      "title": "Hoạt động token",
+      "shortTitle": "Token Usage",
+      "subtitle": "Mức dùng do runtime báo cáo trong 12 tháng gần nhất.",
+      "empty": "Hoạt động token sẽ xuất hiện sau các phản hồi mô hình mới.",
+      "totalTokens": "Tổng token",
+      "peakTokens": "Đỉnh token",
+      "thirtyDayTokens": "Token 30 ngày",
+      "currentStreak": "Chuỗi hiện tại",
+      "longestStreak": "Chuỗi dài nhất",
+      "daysValue": "{{count}} ngày",
+      "last30": "30 ngày",
+      "activeDays": "Ngày hoạt động",
+      "requests": "Yêu cầu",
+      "estimated": "ước tính",
+      "includesEstimates": "bao gồm ước tính",
+      "cellTitle": "{{date}}: {{tokens}} tokens, {{requests}} yêu cầu",
+      "sources": {
+        "user": "Trò chuyện",
+        "api": "API",
+        "cron": "Tự động hóa",
+        "dream": "Bộ nhớ",
+        "system": "Hệ thống"
+      }
+    },
+    "timezone": {
+      "select": "Chọn múi giờ",
+      "search": "Tìm múi giờ",
+      "empty": "Không có múi giờ phù hợp."
+    },
+    "skills": {
+      "description": "Xem các kỹ năng chỉ dẫn mà agent này có thể tải trong cuộc trò chuyện.",
+      "caption": "{{available}} khả dụng · tổng {{total}}",
+      "featured": "Kỹ năng agent",
+      "empty": "Không có kỹ năng nào khả dụng.",
+      "sourceWorkspace": "Tùy chỉnh",
+      "sourceBuiltin": "Tích hợp",
+      "statusAvailable": "Khả dụng",
+      "statusUnavailable": "Không khả dụng",
+      "unavailableReason": "Thiếu: {{reason}}",
+      "openDetails": "Mở chi tiết {{name}}",
+      "loadingDetail": "Đang tải chi tiết kỹ năng...",
+      "loadFailed": "Không tải được chi tiết kỹ năng.",
+      "descriptionTitle": "Mô tả",
+      "source": "Nguồn",
+      "status": "Trạng thái",
+      "requirements": "Yêu cầu",
+      "noRequirements": "Không có yêu cầu rõ ràng.",
+      "commands": "Lệnh",
+      "environment": "Biến môi trường",
+      "missingCommands": "Thiếu CLI",
+      "missingEnvironment": "Thiếu ENV",
+      "unavailableReasonLabel": "Lý do không khả dụng",
+      "rawInstructions": "SKILL.md gốc",
+      "rawInstructionsEmpty": "Không có hướng dẫn gốc.",
+      "detailDescription": "Chi tiết cho {{name}}."
+    }
+  },
+  "chat": {
+    "fallbackTitle": "Trò chuyện {{id}}",
+    "loading": "Đang tải…",
+    "noSessions": "Chưa có phiên nào.",
+    "showMore": "Hiển thị thêm {{count}}",
+    "collapsed": "Đã thu gọn {{count}} cuộc trò chuyện",
+    "showLess": "Thu gọn",
+    "actions": "Tác vụ cho cuộc trò chuyện {{title}}",
+    "newInProject": "Bắt đầu cuộc trò chuyện mới trong {{project}}",
+    "activity": {
+      "running": "Agent running",
+      "complete": "Agent finished"
+    },
+    "pin": "Pin",
+    "unpin": "Unpin",
+    "rename": "Rename",
+    "renameTitle": "Rename chat",
+    "renameDescription": "Choose a local sidebar name for this chat.",
+    "renamePlaceholder": "Chat name",
+    "renameProjectTitle": "Rename project",
+    "renameProjectDescription": "Choose a local sidebar name for this project.",
+    "renameProjectPlaceholder": "Project name",
+    "renameSave": "Save",
+    "archive": "Archive",
+    "unarchive": "Unarchive",
+    "showArchived": "Show archived",
+    "hideArchived": "Hide archived",
+    "delete": "Xóa",
+    "newChat": "Cuộc trò chuyện mới",
+    "groups": {
+      "pinned": "Pinned",
+      "all": "Chats",
+      "projects": "Projects",
+      "today": "Today",
+      "yesterday": "Yesterday",
+      "earlier": "Earlier",
+      "archived": "Archived"
+    }
+  },
+  "deleteConfirm": {
+    "title": "Xóa cuộc trò chuyện này?",
+    "description": "Không thể hoàn tác thao tác này.",
+    "cancel": "Hủy",
+    "confirm": "Xóa"
+  },
+  "connection": {
+    "idle": "Rảnh",
+    "connecting": "Đang kết nối…",
+    "open": "Đã kết nối",
+    "reconnecting": "Đang kết nối lại…",
+    "closed": "Đã ngắt kết nối",
+    "error": "Lỗi kết nối"
+  },
+  "thread": {
+    "loadingConversation": "Đang tải cuộc trò chuyện…",
+    "empty": {
+      "greetings": {
+        "workOn": "Mình cùng làm gì tiếp?",
+        "start": "Hôm nay bắt đầu từ đâu?",
+        "build": "Hôm nay mình xây dựng gì?",
+        "tackle": "Mình cùng xử lý việc gì?"
+      },
+      "quickActions": {
+        "plan": {
+          "title": "Tạo kế hoạch dự án",
+          "prompt": "Tạo một kế hoạch dự án ngắn gọn cho việc tôi nên xây dựng tiếp theo."
+        },
+        "analyze": {
+          "title": "Phân tích dữ liệu này",
+          "prompt": "Giúp tôi phân tích dữ liệu này và chỉ ra các mẫu quan trọng nhất."
+        },
+        "brainstorm": {
+          "title": "Động não ý tưởng",
+          "prompt": "Động não vài ý tưởng thực tế và các đánh đổi cho vấn đề này."
+        },
+        "code": {
+          "title": "Viết mã",
+          "prompt": "Giúp tôi viết mã cho nhiệm vụ này, bắt đầu từ thay đổi hữu ích nhỏ nhất."
+        },
+        "summarize": {
+          "title": "Tóm tắt tài liệu này",
+          "prompt": "Tóm tắt tài liệu này và liệt kê các ý chính."
+        },
+        "more": {
+          "title": "Thêm",
+          "prompt": "Cho tôi xem vài cách hữu ích mà bạn có thể giúp trong workspace này."
+        }
+      },
+      "imageQuickActions": {
+        "icon": {
+          "title": "Thiết kế biểu tượng app",
+          "prompt": "Tạo một biểu tượng ứng dụng 1:1 gọn gàng cho claudebot: robot thân thiện, phong cách vector đơn giản, bảng màu xanh trắng dịu, không có chữ."
+        },
+        "sticker": {
+          "title": "Tạo sticker",
+          "prompt": "Tạo một hình kiểu sticker dễ thương của trợ lý robot nhỏ, nền trông như trong suốt, biểu cảm và vui nhộn."
+        },
+        "poster": {
+          "title": "Tạo poster",
+          "prompt": "Tạo một ý tưởng poster chỉn chu cho trợ lý AI cá nhân, bố cục hiện đại, phân cấp thị giác rõ, phù hợp cho landing page."
+        },
+        "product": {
+          "title": "Mockup sản phẩm",
+          "prompt": "Tạo một hình mockup sản phẩm gọn gàng cho ứng dụng web AI hội thoại, giao diện tối giản, ánh sáng cao cấp, khung thiết bị chân thực."
+        },
+        "portrait": {
+          "title": "Chân dung cách điệu",
+          "prompt": "Tạo chân dung cách điệu của một người bạn đồng hành AI thân thiện, ánh sáng mềm, chi tiết nhưng dễ gần, phong cách minh họa hiện đại."
+        },
+        "edit": {
+          "title": "Chỉnh sửa ảnh",
+          "prompt": "Giúp tôi chỉnh sửa một ảnh. Trước tiên hãy yêu cầu tôi tải lên hoặc chỉ định ảnh, rồi tạo kết quả đã chỉnh sửa."
+        }
+      }
+    },
+    "header": {
+      "toggleSidebar": "Bật/tắt thanh bên",
+      "newChat": "Bắt đầu chat mới",
+      "toggleTheme": "Chuyển chủ đề từ header",
+      "settings": "Mở cài đặt",
+      "sessionInfo": "Chi tiết phiên"
+    },
+    "sessionInfo": {
+      "title": "Phiên",
+      "untitled": "Chat chưa đặt tên",
+      "automations": "Tự động hóa",
+      "count": "{{count}}",
+      "loading": "Đang tải tự động hóa...",
+      "loadFailed": "Không thể tải tự động hóa.",
+      "empty": "Phiên này chưa có tự động hóa.",
+      "disabled": "Tắt",
+      "schedule": {
+        "at": "Lúc {{time}}",
+        "every": "Mỗi {{duration}}",
+        "cron": "Cron {{expr}}",
+        "cronWithTz": "Cron {{expr}} · {{tz}}",
+        "unknown": "Lịch tùy chỉnh"
+      },
+      "next": {
+        "label": "Tiếp theo {{time}}",
+        "disabled": "Đã tạm dừng",
+        "none": "Không có lần chạy tiếp theo"
+      }
+    },
+    "composer": {
+      "placeholderThread": "Nhập tin nhắn…",
+      "placeholderHero": "Bạn đang nghĩ gì?",
+      "placeholderOpening": "Đang mở cuộc trò chuyện mới…",
+      "placeholderStreaming": "Mô hình đang trả lời…",
+      "inputAria": "Ô nhập tin nhắn",
+      "sendHint": "Enter để gửi · Shift+Enter để xuống dòng",
+      "runRuntimeTitle": "Đang chạy · {{elapsed}}",
+      "goalStateStrip": "Mục tiêu · {{label}}",
+      "goalStateFallback": "Mục tiêu",
+      "goalStateExpandAria": "Xem đầy đủ mục tiêu",
+      "goalStateSheetTitle": "Mục tiêu",
+      "goalStateCloseAria": "Đóng mục tiêu",
+      "send": "Gửi tin nhắn",
+      "stop": "Dừng phản hồi",
+      "modelNotConfigured": "Chưa cấu hình mô hình",
+      "configureModel": "Cấu hình mô hình",
+      "queued": {
+        "label": "Hướng dẫn đang chờ",
+        "guide": "Hướng dẫn",
+        "delete": "Xóa hướng dẫn",
+        "edit": "Sửa hướng dẫn",
+        "drag": "Kéo để sắp xếp"
+      },
+      "attachImage": "Đính kèm ảnh",
+      "imageMode": {
+        "label": "Tạo ảnh",
+        "toggle": "Bật/tắt chế độ tạo ảnh",
+        "placeholder": "Mô tả hoặc chỉnh sửa ảnh…",
+        "aspectAria": "Tỷ lệ khung hình ảnh",
+        "aspectLabel": "Tỷ lệ ảnh",
+        "aspect": {
+          "auto": "Tự động",
+          "1_1": "Vuông 1:1",
+          "3_4": "Dọc 3:4",
+          "9_16": "Story 9:16",
+          "4_3": "Ngang 4:3",
+          "16_9": "Rộng 16:9"
+        }
+      },
+      "tools": {
+        "search": "Tìm kiếm",
+        "reason": "Suy luận",
+        "deepResearch": "Nghiên cứu sâu",
+        "voice": "Nhập bằng giọng nói"
+      },
+      "slash": {
+        "ariaLabel": "Lệnh slash",
+        "label": "lệnh",
+        "navigateHint": "↑↓ Chọn",
+        "selectHint": "Enter/Tab Chèn",
+        "closeHint": "Esc Đóng",
+        "commands": {
+          "stop": {
+            "title": "Dừng tác vụ hiện tại",
+            "description": "Hủy lượt agent đang chạy trong cuộc trò chuyện này."
+          },
+          "restart": {
+            "title": "Khởi động lại claudebot",
+            "description": "Khởi động lại tiến trình bot tại chỗ."
+          },
+          "help": {
+            "title": "Hiển thị trợ giúp",
+            "description": "Liệt kê các lệnh slash có sẵn."
+          }
+        },
+        "badges": {
+          "recent": "Gần đây"
+        },
+        "details": {
+          "stopRunning": "Đang chạy"
+        }
+      },
+      "encoding": "Đang xử lý…",
+      "remove": "Xóa tệp đính kèm",
+      "normalizedSizeHint": "{{orig}} → {{current}} (tự động)",
+      "imageRejected": {
+        "unsupported_type": "Loại tệp không được hỗ trợ",
+        "too_many_images": "Tối đa {{max}} ảnh mỗi tin nhắn",
+        "magic_mismatch": "Tệp này không phải là một ảnh thực",
+        "decode_failed": "Không thể giải mã ảnh này",
+        "too_large": "Ảnh quá lớn — hãy thử ảnh nhỏ hơn",
+        "io": "Không thể đọc tệp này"
+      },
+      "mentions": {
+        "ariaLabel": "Ứng dụng",
+        "label": "Ứng dụng",
+        "cliGroup": "Ứng dụng CLI",
+        "mcpGroup": "Dịch vụ MCP",
+        "cliBadge": "CLI",
+        "mcpBadge": "MCP",
+        "cliDescription": "Dùng @{{name}} như ứng dụng CLI cục bộ",
+        "mcpDescription": "Dùng @{{name}} như máy chủ MCP"
+      },
+      "workspace": {
+        "accessAria": "Workspace access mode",
+        "projectAria": "Chọn dự án",
+        "projectPlaceholder": "Chọn dự án",
+        "default": "Default Permission",
+        "full": "Full Access"
+      }
+    },
+    "scrollToBottom": "Cuộn xuống cuối",
+    "loadEarlier": "Tải tin nhắn trước đó",
+    "promptNavigator": {
+      "open": "Mở trình điều hướng prompt",
+      "title": "Prompt",
+      "search": "Tìm prompt",
+      "noResults": "Không có prompt phù hợp.",
+      "jumpTo": "Nhảy tới prompt: {{label}}"
+    }
+  },
+  "message": {
+    "streaming": "đang truyền",
+    "assistantTyping": "Trợ lý đang nhập",
+    "toolSingle": "Đang dùng một công cụ",
+    "toolMany": "Đã dùng {{count}} công cụ",
+    "toolSummary": "{{count}} công cụ",
+    "toolSummaryMany": "{{count}} công cụ",
+    "reasoningTools": "Suy luận · {{count}} công cụ",
+    "reasoningToolsSingular": "Suy luận · 1 công cụ",
+    "reasoning": "Suy luận",
+    "reasoningStreaming": "Đang suy nghĩ…",
+    "reasoningSummary": "Suy luận",
+    "agentActivitySummary": "{{reasoning}} bước · {{tools}} lần gọi công cụ",
+    "agentActivityToolsOnly": "{{tools}} lần gọi công cụ",
+    "agentActivityLiveSummary": "Đang chạy… · {{reasoning}} bước · {{tools}} lần gọi công cụ",
+    "agentActivityLiveToolsOnly": "Đang chạy… · {{tools}} lần gọi công cụ",
+    "imageAttachment": "Tệp hình ảnh đính kèm",
+    "copyReply": "Sao chép trả lời",
+    "copiedReply": "Đã sao chép trả lời",
+    "turnLatencyTitle": "Thời gian phản hồi (end-to-end)",
+    "activityThinkingFor": "Đang suy nghĩ trong {{duration}}",
+    "activityThought": "Đã suy nghĩ",
+    "activityThoughtFor": "Đã suy nghĩ trong {{duration}}",
+    "cliActivityRunningOne": "Đang dùng @{{name}}",
+    "cliActivityRanOne": "Đã dùng @{{name}}",
+    "cliActivityFailedOne": "@{{name}} thất bại",
+    "cliActivityRunningMany": "Đang dùng {{count}} ứng dụng CLI",
+    "cliActivityRanMany": "Đã dùng {{count}} ứng dụng CLI",
+    "cliActivityFailedMany": "{{count}} ứng dụng CLI thất bại",
+    "cliRunRunning": "Đang dùng",
+    "cliRunRan": "Đã dùng",
+    "cliRunFailed": "Thất bại",
+    "automationSourceFallback": "Tự động hóa",
+    "automationTriggered": "Tự động kích hoạt"
+  },
+  "lightbox": {
+    "title": "Xem trước ảnh",
+    "open": "Xem ảnh",
+    "prev": "Ảnh trước",
+    "next": "Ảnh tiếp theo",
+    "close": "Đóng xem trước"
+  },
+  "filePreview": {
+    "aria": "Xem trước tệp",
+    "close": "Đóng xem trước tệp",
+    "loading": "Đang tải bản xem trước...",
+    "failed": "Không thể xem trước tệp này.",
+    "routeMissing": "Xem trước tệp cần gateway mới nhất. Hãy khởi động lại claudebot gateway rồi thử lại.",
+    "resize": "Đổi kích thước bản xem trước tệp",
+    "truncated": "Bản xem trước bị cắt vì tệp này lớn."
+  },
+  "code": {
+    "fallbackLanguage": "mã",
+    "copyAria": "Sao chép mã",
+    "copy": "Sao chép",
+    "copied": "Đã sao chép"
+  },
+  "common": {
+    "dismiss": "Đóng"
+  },
+  "errors": {
+    "messageTooBig": {
+      "title": "Tin nhắn quá lớn",
+      "body": "Máy chủ đã từ chối tin nhắn trước vì vượt quá giới hạn kích thước. Hãy bớt ảnh hoặc chọn tệp nhỏ hơn rồi thử lại."
+    },
+    "workspaceScopeRejected": {
+      "title": "Workspace was not changed",
+      "body": "Claudebot kept the previous workspace because the requested project or access mode was rejected by the gateway."
+    }
+  },
+  "workspace": {
+    "dialog": {
+      "defaultProject": "Default workspace",
+      "manual": "Dán đường dẫn",
+      "manualPlaceholder": "/Users/name/project",
+      "usePath": "Use Path",
+      "absolutePathRequired": "Enter an absolute folder path on this machine."
+    }
+  }
+}
