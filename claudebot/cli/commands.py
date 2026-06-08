@@ -766,6 +766,7 @@ def _migrate_cron_store(config: "Config") -> None:
 @app.command()
 def gateway(
     port: int | None = typer.Option(None, "--port", "-p", help="Gateway port"),
+    host: str | None = typer.Option(None, "--host", "-H", help="Gateway bind host"),
     workspace: str | None = typer.Option(None, "--workspace", "-w", help="Workspace directory"),
     verbose: bool = typer.Option(False, "--verbose", "-v", help="Verbose output"),
     config: str | None = typer.Option(None, "--config", "-c", help="Path to config file"),
@@ -786,13 +787,14 @@ def gateway(
             filter=lambda record: record["extra"].setdefault("channel", "-") or True,
         )
     cfg = _load_runtime_config(config, workspace)
-    _run_gateway(cfg, port=port)
+    _run_gateway(cfg, port=port, host=host)
 
 
 def _run_gateway(
     config: Config,
     *,
     port: int | None = None,
+    host: str | None = None,
     open_browser_url: str | None = None,
     webui_static_dist: bool = True,
     health_server_enabled: bool = True,
@@ -806,7 +808,9 @@ def _run_gateway(
     from claudebot.webui.gateway_services import build_gateway_services
 
     bind_port = port if port is not None else config.gateway.port
+    bind_host = host if host is not None else config.gateway.host
     config.gateway.port = bind_port
+    config.gateway.host = bind_host
 
     console.print(
         f"{__logo__} Starting Claude Code gateway version {__version__} on port {bind_port}..."
@@ -821,7 +825,7 @@ def _run_gateway(
     websocket_data.update(
         {
             "enabled": True,
-            "host": websocket_data.get("host") or config.gateway.host,
+            "host": websocket_data.get("host") or bind_host,
             "port": bind_port,
             "path": websocket_data.get("path") or "/",
             "allow_from": websocket_data.get("allow_from")
@@ -830,6 +834,8 @@ def _run_gateway(
             "streaming": True,
         }
     )
+    if bind_host in ("0.0.0.0", "::"):
+        websocket_data["allow_unauthenticated_wildcard_host"] = True
     if not (
         websocket_data.get("token")
         or websocket_data.get("token_issue_path")

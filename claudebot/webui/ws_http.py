@@ -250,7 +250,7 @@ class GatewayHTTPHandler:
         if secret:
             if not _issue_route_secret_matches(request.headers, secret):
                 return _http_error(401, "Unauthorized")
-        elif not _is_localhost(connection):
+        elif not self.config.allow_unauthenticated_wildcard_host and not _is_localhost(connection):
             return _http_error(403, "bootstrap is localhost-only")
 
         if not self.tokens.can_issue(include_api_token=True):

@@ -888,6 +888,21 @@ def test_wildcard_host_with_secret_is_valid(bus: MagicMock) -> None:
     assert channel.config.host == "0.0.0.0"
 
 
+def test_wildcard_host_with_explicit_unauthenticated_bypass_is_valid(bus: MagicMock) -> None:
+    channel = _ch(bus, host="0.0.0.0", allowUnauthenticatedWildcardHost=True)
+    assert channel.config.host == "0.0.0.0"
+    assert channel.config.websocket_requires_token is False
+
+
+def test_bootstrap_accepts_remote_with_explicit_unauthenticated_bypass(bus: MagicMock) -> None:
+    channel = _ch(bus, host="0.0.0.0", allowUnauthenticatedWildcardHost=True)
+    resp = channel.gateway.http._handle_bootstrap(_REMOTE, _NO_HEADERS)
+
+    assert resp.status_code == 200
+    body = json.loads(resp.body)
+    assert body["token"].startswith("nbwt_")
+
+
 def test_wildcard_ipv6_without_auth_raises(bus: MagicMock) -> None:
     import pytest
     from pydantic_core import ValidationError
